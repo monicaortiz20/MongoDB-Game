@@ -3,7 +3,7 @@
 const mongoose = require("mongoose");
 
 //const DATABASE_URL = "mongodb://localhost:27017/fakeshop";
-mongoose.connect("mongodb://localhost:27017/fakeshop", { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb://localhost:27017/mydb", { useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 
 // Eventos O ""Listeners"

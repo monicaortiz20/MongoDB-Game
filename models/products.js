@@ -2,11 +2,6 @@ const mongoose = require('mongoose');
 
 //ejemplo de esquema que crea Mongoose, por detrás usa MongoDB
 const objectSchema = {
-    id: { 
-        type: Number, 
-        required: true,
-        unique: true
-    },
     title: { 
         type: String, 
         required: true 
@@ -15,7 +10,11 @@ const objectSchema = {
         type: Number, 
         required: true 
     },
-    description: { 
+    description: {
+        type: String, 
+        required: true 
+    },
+    company_name: { 
         type: String, 
         required: true 
     },

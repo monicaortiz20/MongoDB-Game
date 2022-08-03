@@ -13,6 +13,7 @@ const owl = require('cowsay2/cows/owl');
 const productsRouter = require('./routes/productsRoutes');  //rutas de productos importadas
 const productsApiRoutes= require('./routes/productsApiRoutes')
 const entriesApiRoutes= require('./routes/entriesApiRoutes')
+const providersApiRoutes = require('./routes/providersApiRoutes')
 
 //después mis propios módulos, los que me creo yo
 // const calc = require('./utils/calculator')    //traemos mi propio módulo que nos hemos creado
@@ -49,6 +50,7 @@ app.use("/products", productsRouter)  //el middleware afectaría a la ruta /prod
 
 app.use('/api/products', productsApiRoutes);
 app.use('/api/', entriesApiRoutes);
+app.use('/api/providers',providersApiRoutes);
 
 //esta barra sola, nos indica el index de la web, la home. Si pongo /algo, voy a una pag
 app.get('/', (req, res) => {
