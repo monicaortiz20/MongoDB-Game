@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 
 //ejemplo de esquema que crea Mongoose, por detrás usa MongoDB
 const objectSchema = {
+    id:{ 
+        type: Number, 
+        required: true
+    },
     title: { 
         type: String, 
         required: true 
@@ -31,10 +35,9 @@ module.exports = Product;
 /*
 //insertar un producto  (documentación)
 const p = new Product({
-    id: 3,
-    title: "Tortilla",
-    price: 1.80,
-    description: "Tortilla jugosa del teatro",
+    title: "Mojito del MExicano",
+    price: 6.70,
+    description: "Coge un mojito y chupito, corre que repito",
     image:"https://www.recetasderechupete.com/wp-content/uploads/2020/11/Tortilla-de-patatas-4-768x530.jpg"
 });
 

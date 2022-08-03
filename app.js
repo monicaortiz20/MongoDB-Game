@@ -50,7 +50,7 @@ app.use("/products", productsRouter)  //el middleware afectaría a la ruta /prod
 
 app.use('/api/products', productsApiRoutes);
 app.use('/api/', entriesApiRoutes);
-app.use('/api/providers',providersApiRoutes);
+// app.use('/api/providers',providersApiRoutes);
 
 //esta barra sola, nos indica el index de la web, la home. Si pongo /algo, voy a una pag
 app.get('/', (req, res) => {

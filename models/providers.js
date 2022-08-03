@@ -17,24 +17,25 @@ const objectSchema = {
     },
     url_web:{
         type: String,
+        required: true
     }
 };
 
 // Crear el esquema
 const providersSchema = mongoose.Schema(objectSchema); //le pasamos el nombre de la variable que hemos creadocon el obj esq
 // Crear el modelo --> Colección
-const Providers = mongoose.model('providers', providersSchema);
+const Provider = mongoose.model('Provider', providersSchema);
 
-module.exports = Providers;
+module.exports = Provider;
 
 
 //insertar un producto  (documentación)
-const provider = new Providers({
-    company_name: "Teatro Marquina",
-    CIF: "B40236882",
-    address: "Calle de Prim 11",
-    url_web:"https://www.tortillasmarquina.com"
-});
+// const provider = new Provider({
+//     company_name: "Teatro Marquina",
+//     CIF: "B40236882",
+//     address: "Calle de Prim 11",
+//     provider: OnbjetID("62ea9090d52869066e61a853")
+// });
 
-//primero creo el producto y luego lo guardo
-provider.save().then((data)=>console.log(data))
+// //primero creo el producto y luego lo guardo
+// provider.save().then((data)=>console.log(data))

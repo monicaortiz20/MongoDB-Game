@@ -1,1 +1,1 @@
-const providers = require('../models/providers'); //importo modelo de BBDD del producto
+// const providers = require('../models/providers'); //importo modelo de BBDD del producto
