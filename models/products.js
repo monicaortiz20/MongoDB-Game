@@ -14,18 +14,10 @@ const objectSchema = {
         type: String, 
         required: true 
     },
-    company_name: { 
-        type: String, 
+    provider:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Providers',
         required: true 
-    },
-    image:{
-        type: String,
-        validate: {
-            validator: function(url){
-                return url.indexOf('.jpg') != -1;
-            }, 
-            message: "Porfa, sólo imágenes JPG"
-        }
     }
 };
 // Crear el esquema

@@ -8,7 +8,7 @@ const objectSchema = {
         unique: true
     },
     CIF: { 
-        type: Number, 
+        type: String, 
         required: true 
     },
     address: { 
@@ -17,18 +17,24 @@ const objectSchema = {
     },
     url_web:{
         type: String,
-        validate: {
-            validator: function(url){
-                return url.indexOf('.jpg') != -1;
-            }, 
-            message: "Porfa, sólo imágenes JPG"
-        }
     }
 };
 
 // Crear el esquema
 const providersSchema = mongoose.Schema(objectSchema); //le pasamos el nombre de la variable que hemos creadocon el obj esq
 // Crear el modelo --> Colección
-const Providers = mongoose.model('Providers', providersSchema);
+const Providers = mongoose.model('providers', providersSchema);
 
 module.exports = Providers;
+
+
+//insertar un producto  (documentación)
+const provider = new Providers({
+    company_name: "Teatro Marquina",
+    CIF: "B40236882",
+    address: "Calle de Prim 11",
+    url_web:"https://www.tortillasmarquina.com"
+});
+
+//primero creo el producto y luego lo guardo
+provider.save().then((data)=>console.log(data))
