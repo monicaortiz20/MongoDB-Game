@@ -2,10 +2,14 @@
 const mongoose = require('mongoose');
 
 const objectSchema = {
+    // id: {
+    //     type: Number,
+    //     required: true,
+    //     unique: true
+    // },
     company_name: { 
         type: String, 
         required: true ,
-        unique: true
     },
     CIF: { 
         type: String, 
@@ -17,7 +21,6 @@ const objectSchema = {
     },
     url_web:{
         type: String,
-        required: true
     }
 };
 

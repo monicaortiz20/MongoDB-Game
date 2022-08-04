@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
+require('./providers')
 
 //ejemplo de esquema que crea Mongoose, por detrás usa MongoDB
 const objectSchema = {
     id:{ 
         type: Number, 
-        required: true
+        required: true,
+        unique:true
     },
     title: { 
         type: String, 
@@ -18,11 +20,10 @@ const objectSchema = {
         type: String, 
         required: true 
     },
-    provider:{
+    provider:[{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Providers',
-        required: true 
-    }
+        ref: 'Provider',
+    }]
 };
 // Crear el esquema
 const productSchema = mongoose.Schema(objectSchema);

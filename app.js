@@ -8,7 +8,6 @@ require('./utils/dbMongo.js'); //abrir conexión a Mongo BBDD
 const emoji = require('emoji-whale');
 const cowsay = require('cowsay2');    // para que nos saque a la vaca pintada
 const whale = require('cowsay2/cows/whale');    // para que nos saque a la ballena pintada
-const owl = require('cowsay2/cows/owl');
 
 const productsRouter = require('./routes/productsRoutes');  //rutas de productos importadas
 const productsApiRoutes= require('./routes/productsApiRoutes')
